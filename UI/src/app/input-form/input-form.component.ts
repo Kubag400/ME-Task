@@ -35,15 +35,15 @@ export class InputFormComponent {
   }
 
   checkFields():boolean{
-    if(this.code === '')
+    if(this.code === '' || this.code.length < 2)
     {
-        this.errorMessage = "Please fill code field";
+        this.errorMessage = "Code field cannot be empty and requires at least 2 characters";
         this.errorState = true;
         return true;
     }
-    if(this.name === '')
+    if(this.name === '' || this.name.length < 3) 
       {
-        this.errorMessage = "Please fill name field";
+        this.errorMessage = "Name field cannot be empty and requires at lest 3 characters";
         this.errorState = true;
         return true;
       }

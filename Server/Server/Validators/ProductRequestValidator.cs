@@ -10,13 +10,11 @@ namespace Server.Validators
             RuleFor(x => x.Name)
                 .NotNull()
                 .NotEmpty()
-                .MinimumLength(3)
-            .WithMessage("Name property is incorrect");
+                .MinimumLength(3);
             RuleFor(x => x.Code)
                 .NotNull()
                 .NotEmpty()
-                .MinimumLength(2)
-                .WithMessage("Code property is incorrect");
+                .MinimumLength(2);
         }
     }
 }
