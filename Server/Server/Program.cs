@@ -13,7 +13,10 @@ builder.Services.AddScoped<IProductService, ProductInMemoryService>();
 builder.Services.AddScoped<IValidator<ProductRequest>, ProductRequestValidator>();
 builder.Services.AddControllers();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-builder.Services.AddDbContext<ApiDbContext>(opt => opt.UseInMemoryDatabase("ProductDb"));
+builder.Services.AddDbContext<ApiDbContext>(opt =>
+{
+    opt.UseInMemoryDatabase(builder.Configuration.GetConnectionString("Database"));
+});
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy(name: corsPolicy, policy => {
@@ -22,6 +25,7 @@ builder.Services.AddCors(opt =>
             .AllowAnyMethod();
     });
 });
+builder.Services.AddHostedService<DatabaseFixture>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
