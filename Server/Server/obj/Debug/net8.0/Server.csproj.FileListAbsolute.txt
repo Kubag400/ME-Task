@@ -34,3 +34,6 @@ D:\Projekty\ME-Task\Server\Server\obj\Debug\net8.0\ref\Server.dll
 D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\FluentResults.dll
 D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\MediatR.dll
 D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
