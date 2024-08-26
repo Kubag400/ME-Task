@@ -1,9 +1,6 @@
-﻿using FluentResults;
-using MediatR;
-
-namespace Server.Models.Functions.Command
+﻿namespace Server.Models
 {
-    public class InsertProductCommand : IRequest<Result>
+    public class ProductRequest
     {
         public string Name { get; init; }
         public string Code { get; init; }

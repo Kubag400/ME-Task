@@ -31,3 +31,6 @@ D:\Projekty\ME-Task\Server\Server\obj\Debug\net8.0\refint\Server.dll
 D:\Projekty\ME-Task\Server\Server\obj\Debug\net8.0\Server.pdb
 D:\Projekty\ME-Task\Server\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 D:\Projekty\ME-Task\Server\Server\obj\Debug\net8.0\ref\Server.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\FluentResults.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\MediatR.dll
+D:\Projekty\ME-Task\Server\Server\bin\Debug\net8.0\MediatR.Contracts.dll

@@ -1,8 +1,9 @@
-﻿using Server.Services;
+﻿using MediatR;
+using Server.Services;
 
 namespace Server.Models.Functions.Query
 {
-    public class GetAllProductsHandler
+    public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, List<ProductEntity>>
     {
         private readonly IProductService _productService;
 

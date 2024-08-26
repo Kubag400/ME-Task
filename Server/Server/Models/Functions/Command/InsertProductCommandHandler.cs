@@ -1,9 +1,10 @@
 ﻿using FluentResults;
+using MediatR;
 using Server.Services;
 
 namespace Server.Models.Functions.Command
 {
-    public class InsertProductCommandHandler
+    public class InsertProductCommandHandler : IRequestHandler<InsertProductCommand, Result>
     {
         private readonly IProductService _productService;
         public InsertProductCommandHandler(IProductService productService)

@@ -1,3 +1,4 @@
+using Server.Services;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

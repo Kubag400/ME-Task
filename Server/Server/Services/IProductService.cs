@@ -1,6 +1,11 @@
-﻿namespace Server.Services
+﻿using FluentResults;
+using Server.Models;
+
+namespace Server.Services
 {
-    public class IProductService
+    public interface IProductService
     {
+        Task<Result<List<ProductEntity>>> GetProductsAsync();
+        Task<Result> InsertProductAsync(ProductEntity entity);
     }
 }
