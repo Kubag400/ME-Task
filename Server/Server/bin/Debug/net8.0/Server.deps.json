@@ -9,6 +9,7 @@
       "Server/1.0.0": {
         "dependencies": {
           "FluentResults": "3.16.0",
+          "FluentValidation": "11.9.2",
           "MediatR": "12.4.0",
           "Microsoft.EntityFrameworkCore.InMemory": "8.0.8",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -26,6 +27,14 @@
           "lib/netstandard2.1/FluentResults.dll": {
             "assemblyVersion": "3.16.0.0",
             "fileVersion": "3.16.0.0"
+          }
+        }
+      },
+      "FluentValidation/11.9.2": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.9.2.0"
           }
         }
       },
@@ -184,6 +193,13 @@
       "sha512": "sha512-VWacGzOyN9k7LOKqiNLnFvqTDLbFvepHlINdM3pPTD0YWI+a+VW/Q9gcx4gmJDpDZ32cAsczz5vmRjLCL5UOhA==",
       "path": "fluentresults/3.16.0",
       "hashPath": "fluentresults.3.16.0.nupkg.sha512"
+    },
+    "FluentValidation/11.9.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "path": "fluentvalidation/11.9.2",
+      "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
     },
     "MediatR/12.4.0": {
       "type": "package",

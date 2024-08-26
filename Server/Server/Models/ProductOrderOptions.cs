@@ -2,8 +2,8 @@
 {
     public enum ProductOrderOptions
     {
-        None = 0,
-        ByPriceDesc = 1,
-        ByPriceAsc = 2,
+        None,
+        ByPriceDesc,
+        ByPriceAsc,
     }
 }

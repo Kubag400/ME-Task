@@ -2,7 +2,7 @@
   {
     "ContainingType": "Server.Controllers.ProductController",
     "Method": "GetProducts",
-    "RelativePath": "GetProducts",
+    "RelativePath": "Product",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -13,18 +13,12 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Server.Controllers.ProductController",
     "Method": "InsertProduct",
-    "RelativePath": "InsertProduct",
+    "RelativePath": "Product",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -35,17 +29,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 400
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

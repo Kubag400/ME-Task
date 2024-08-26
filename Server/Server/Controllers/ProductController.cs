@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Server.Models.Functions.Command;
 using Server.Models.Functions.Query;
 using Server.Models;
+using Server.Validators;
 
 namespace Server.Controllers
 {
@@ -17,8 +18,7 @@ namespace Server.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("/GetProducts")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpGet]
         public async Task<IActionResult> GetProducts([FromQuery] ProductOrderOptions options)
         {
             var request = new GetAllProductsQuery
@@ -30,11 +30,17 @@ namespace Server.Controllers
             return Ok(result);
         }
 
-        [HttpPost("/InsertProduct")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [HttpPost]
         public async Task<IActionResult> InsertProduct([FromBody] ProductRequest request)
         {
+            var validator = new ProductRequestValidator();
+            var validationResult = validator.Validate(request);
+
+            if(!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors.FirstOrDefault());
+            }
+
             var command = new InsertProductCommand
             {
                 Code = request.Code,
@@ -47,7 +53,7 @@ namespace Server.Controllers
             {
                 return Ok();
             }
-            return BadRequest();
+            return BadRequest(result.Errors.FirstOrDefault()!.Message);
         }
     }
 }

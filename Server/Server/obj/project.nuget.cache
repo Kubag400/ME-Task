@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Exv/EG5f2As=",
+  "dgSpecHash": "LshjI5pwenw=",
   "success": true,
   "projectFilePath": "D:\\Projekty\\ME-Task\\Server\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kubag\\.nuget\\packages\\fluentresults\\3.16.0\\fluentresults.3.16.0.nupkg.sha512",
+    "C:\\Users\\Kubag\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\Kubag\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\Kubag\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Kubag\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

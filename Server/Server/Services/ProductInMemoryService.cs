@@ -4,13 +4,10 @@ using Server.Models;
 
 namespace Server.Services
 {
-    public class ProductService : IProductService
+    public class ProductInMemoryService(ApiDbContext db) : IProductService
     {
-        private readonly ApiDbContext _db;
-        public ProductService(ApiDbContext db)
-        {
-            _db = db;
-        }
+        private readonly ApiDbContext _db = db;
+
         public async Task<Result<List<ProductEntity>>> GetProductsAsync()
         {
             var items = await _db.Products.ToListAsync();
