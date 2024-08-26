@@ -6,7 +6,6 @@ namespace Server.Services
 {
     public class ProductService : IProductService
     {
-        //TODO: Implement SQLite/InMemory implementation
         private readonly ApiDbContext _db;
         public ProductService(ApiDbContext db)
         {
@@ -25,7 +24,6 @@ namespace Server.Services
             if (result > 0)
                 return Result.Ok();
 
-            //TODO: Fix reason, add logger?
             return Result.Fail("Insert product failed.");
         }
     }

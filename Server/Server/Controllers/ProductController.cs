@@ -43,6 +43,10 @@ namespace Server.Controllers
             };
             var result = await _mediator.Send(command);
 
+            if(result.IsSuccess)
+            {
+                return Ok();
+            }
             return BadRequest();
         }
     }
