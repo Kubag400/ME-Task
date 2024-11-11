@@ -1,0 +1,38 @@
+<div class="sort">
+<ul class="list-group list-group-horizontal">
+    <label class="list-group-item">
+        <input
+        class="form-check-input me-1" type="checkbox"[(ngModel)] = "defaultOption" (click)="onCheck(0)">
+        Default
+      </label>
+      <label class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" [(ngModel)] = "descOption" (click)="onCheck(1)">
+        Price Descending
+      </label>
+      <label class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" [(ngModel)] = "ascOption" (click)="onCheck(2)">
+        Price Ascending
+      </label>
+      <button type="button" (click)="onRefresh()" class="btn btn-primary">Refresh</button>
+</ul>
+</div>
+<table class = "table">
+    <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+<tbody>
+@for(product of products; track product.id)
+{
+    <tr>
+        <th scope="row">{{product.code}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+}
+</tbody>
+</table>
+

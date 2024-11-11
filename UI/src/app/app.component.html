@@ -1,0 +1,15 @@
+<div id="container">
+  <div class = "row">
+  <h3 class = titleHeader>{{title}}</h3>
+  <div class="col">
+  </div>
+    <div class="col-6">
+      <app-items-list [products]="products" (refreshEvent)="onRefresh($event)"></app-items-list>
+    </div>
+    <div class="col">
+      <app-input-form (onCreateProduct)="createProduct($event)"></app-input-form>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
